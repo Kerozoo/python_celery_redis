@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/code
+    command: celery -A tasks.task worker --loglevel=INFO
+    tty: true
+    stdin_open: true
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:6.2
+    ports:
+      - "6379:6379"
