@@ -7,7 +7,7 @@ docker-compose up
 docker-compose exec app bash
 
 root@95ef66cd9bdf:/code# python
->>> from tasks.task import add, show
+>>> from task.tasks import add, show
 >>> task = show.si('test')
 >>> result = task.apply_async()
 >>> result.result

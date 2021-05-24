@@ -5,7 +5,7 @@ services:
     build: .
     volumes:
       - .:/code
-    command: celery -A tasks.task worker --loglevel=INFO
+    command: celery -A task.tasks worker --loglevel=INFO
     tty: true
     stdin_open: true
     depends_on:
