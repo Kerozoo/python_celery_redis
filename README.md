@@ -14,6 +14,10 @@ root@95ef66cd9bdf:/code# python
 3
 >>> result
 <AsyncResult: cf4cadbd-7ceb-4045-be10-ae67565b265b>565b265b>
+
+docker-compose logs app
+app_1    | [2021-05-24 23:37:56,388: WARNING/ForkPoolWorker-8] x=1, 
+y=2
 ```
 
 - check result
