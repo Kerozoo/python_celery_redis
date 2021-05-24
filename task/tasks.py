@@ -9,14 +9,8 @@ app.conf.result_backend = 'redis://redis:6379/0'
 @app.task
 def add(x, y):
     # 並列、直列タスクでわかりやすくする為にスリープする
-    # time.sleep(5)
+    time.sleep(3)
 
     # 引数の値を表示する
     print('x={}, y={}'.format(x, y))
     return x + y
-
-@app.task
-def show(text):
-    # time.sleep(5)
-    print('{}'.format(text))
-    return '{}'.format(text)
